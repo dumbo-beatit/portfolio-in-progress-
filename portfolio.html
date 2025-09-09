@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Day Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-half"></div>
+  <div class="container">
+    <h1>my portfolio</h1>
+    <p>my works</p>
+    <button class="toggle-btn" id="toggleBtn">Show Repositories</button>
+    <div class="button-group slide" id="repoGroup">
+      <div class="repo-row">
+        <a class="repo-link" href="https://github.com/dumbo-beatit/class-project-4" target="_blank" rel="noopener">
+          <button class="repo-btn">Class Project 4</button>
+        </a>
+        <span class="repo-note">class works on dialy basis</span>
+      </div>
+      <div class="repo-row">
+        <a class="repo-link" href="https://github.com/dumbo-beatit/class-project-3" target="_blank" rel="noopener">
+          <button class="repo-btn">Class Project 3</button>
+        </a>
+        <span class="repo-note">class works on daiky basis</span>
+      </div>
+      <div class="repo-row">
+        <a class="repo-link" href="https://github.com/dumbo-beatit/do-not-look-it-s-unimportant" target="_blank" rel="noopener">
+          <button class="repo-btn">Do Not Look</button>
+        </a>
+        <span class="repo-note">you have been warned</span>
+      </div>
+      <div class="repo-row">
+        <a class="repo-link" href="https://github.com/dumbo-beatit/class-projects-2" target="_blank" rel="noopener">
+          <button class="repo-btn">Class Projects 2</button>
+        </a>
+        <span class="repo-note">class works on daily basis</span>
+      </div>
+      <div class="repo-row">
+        <a class="repo-link" href="https://github.com/dumbo-beatit/class-projects" target="_blank" rel="noopener">
+          <button class="repo-btn">Class Projects on daily basis</button>
+        </a>
+        <span class="repo-note">First round of class projects</span>
+      </div>
+      <div class="repo-row">
+        <a class="repo-link" href="https://github.com/dumbo-beatit/how-to" target="_blank" rel="noopener">
+          <button class="repo-btn">How-To</button>
+        </a>
+        <span class="repo-note">recipe guids</span>
+      </div>
+      <div class="repo-row">
+        <a class="repo-link" href="https://github.com/dumbo-beatit/html" target="_blank" rel="noopener">
+          <button class="repo-btn">HTML</button>
+        </a>
+        <span class="repo-note">my first html</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Slide up/down toggle
+    const toggleBtn = document.getElementById('toggleBtn');
+    const repoGroup = document.getElementById('repoGroup');
+    let open = false;
+    toggleBtn.addEventListener('click', () => {
+      open = !open;
+      if (open) {
+        repoGroup.classList.add('open');
+        toggleBtn.textContent = 'Hide Repositories';
+      } else {
+        repoGroup.classList.remove('open');
+        toggleBtn.textContent = 'Show Repositories';
+      }
+    });
+    // Optional: Open by default on desktop
+    if(window.innerWidth > 700){
+      repoGroup.classList.add('open');
+      open = true;
+      toggleBtn.textContent = 'Hide Repositories';
+    }
+  </script>
+</body>
+</html>
